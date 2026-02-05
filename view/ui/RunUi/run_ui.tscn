@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://biqf57jeuninp"]
+
+[ext_resource type="Script" uid="uid://b8qredjvubo2v" path="res://view/ui/RunUi/run_ui.gd" id="1_urv1m"]
+[ext_resource type="Texture2D" uid="uid://bohtq6f4si33e" path="res://view/assets/npcsprites/1.png" id="2_vea2n"]
+
+[node name="RunUi" type="Control" unique_id=996893055]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_urv1m")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1650473311]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = -20.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1674436969]
+visible = false
+layout_mode = 2
+texture = ExtResource("2_vea2n")
+expand_mode = 2

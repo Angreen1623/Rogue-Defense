@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://fw47674nx0ow"]
+
+[ext_resource type="Script" uid="uid://ctykuw58jnjs0" path="res://view/scenes/run_scene.gd" id="1_a0ank"]
+[ext_resource type="Texture2D" uid="uid://8wuwnmbuijxf" path="res://view/assets/background/background.png" id="2_jtjss"]
+
+[node name="RunScene" type="Node2D" unique_id=1472480570]
+script = ExtResource("1_a0ank")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=956640247]
+texture = ExtResource("2_jtjss")
+centered = false

@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="EnemySnapshot" format=3 uid="uid://bhu48bc16q4fk"]
+
+[ext_resource type="Script" uid="uid://ddkmmlxoxtwr6" path="res://mock/Snapshot/enemy/EnemySnapshot.gd" id="1_yf38k"]
+
+[resource]
+script = ExtResource("1_yf38k")

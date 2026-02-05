@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://fw47674nx0ow"]
+
+[ext_resource type="Script" uid="uid://ctykuw58jnjs0" path="res://view/scenes/RunScene/node_2d.gd" id="2_ccl4p"]
+[ext_resource type="Texture2D" uid="uid://8wuwnmbuijxf" path="res://view/assets/background/background.png" id="2_jtjss"]
+[ext_resource type="PackedScene" uid="uid://biqf57jeuninp" path="res://view/ui/RunUi/run_ui.tscn" id="3_cgcwc"]
+
+[node name="RunScene" type="Node" unique_id=2141480253]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1472480570]
+script = ExtResource("2_ccl4p")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=956640247]
+texture = ExtResource("2_jtjss")
+centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1590461647]
+
+[node name="RunUi" parent="CanvasLayer" unique_id=996893055 instance=ExtResource("3_cgcwc")]

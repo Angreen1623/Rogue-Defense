@@ -10,9 +10,15 @@ config_version=5
 
 [application]
 
-config/name="Novo Projeto de Jogo"
+config/name="Rogue Defense"
+run/main_scene="uid://b5kw620khnrhh"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=952
+window/size/viewport_height=528
 
 [physics]
 

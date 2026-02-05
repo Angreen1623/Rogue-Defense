@@ -1,0 +1,180 @@
+[gd_scene format=3 uid="uid://da34n51ibanh7"]
+
+[ext_resource type="Script" uid="uid://d0rh8l5gdmvjd" path="res://view/ui/SelectingNpcs/SelectingNpcs.gd" id="1_ynnbe"]
+[ext_resource type="StyleBox" uid="uid://ut7fn6457uqd" path="res://view/ui/Themes/npc_button_normal.tres" id="2_ihkuh"]
+[ext_resource type="StyleBox" uid="uid://cougiaikoix52" path="res://view/ui/Themes/npc_button_pressed.tres" id="3_lnf3b"]
+[ext_resource type="StyleBox" uid="uid://cy2fjb7rfkc6c" path="res://view/ui/Themes/npc_button_hover.tres" id="4_01lgq"]
+[ext_resource type="Texture2D" uid="uid://c75jrp57x4wfs" path="res://icon.svg" id="5_xolgm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sx88k"]
+bg_color = Color(0.25490198, 0.25490198, 0.25490198, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_doc8f"]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3i803"]
+bg_color = Color(0, 0, 0, 0.3647059)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ln7tu"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ushea"]
+bg_color = Color(0, 0, 0, 0.3647059)
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nb4k0"]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ks8t7"]
+bg_color = Color(0.31580526, 0.31580526, 0.31580526, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl5ax"]
+bg_color = Color(0.6, 0.6, 0.6, 0.63529414)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="SelectingNpcs" type="Control" unique_id=859715756]
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ynnbe")
+max_npcs_selected = null
+
+[node name="Panel" type="Panel" parent="." unique_id=570866536]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sx88k")
+
+[node name="Panel" type="Panel" parent="Panel" unique_id=1495398078]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 25.0
+offset_right = -30.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_doc8f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel" unique_id=1232015480]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel/Panel/VBoxContainer" unique_id=139905406]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_3i803")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Panel/VBoxContainer/Panel" unique_id=1550131157]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/scrollbar_v_separation = 5
+theme_override_styles/panel = SubResource("StyleBoxFlat_ln7tu")
+
+[node name="NpcsButtonsContainer" type="HBoxContainer" parent="Panel/Panel/VBoxContainer/Panel/ScrollContainer" unique_id=1649152079]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="ModelNpcButton" type="Button" parent="Panel/Panel/VBoxContainer/Panel/ScrollContainer/NpcsButtonsContainer" unique_id=68469892]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("2_ihkuh")
+theme_override_styles/pressed = ExtResource("3_lnf3b")
+theme_override_styles/hover = ExtResource("4_01lgq")
+toggle_mode = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/VBoxContainer/Panel/ScrollContainer/NpcsButtonsContainer/ModelNpcButton" unique_id=1954216694]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="Panel/Panel/VBoxContainer/Panel/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer" unique_id=1064290327]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "<NPC NAME>"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel/VBoxContainer/Panel/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer" unique_id=1595556087]
+layout_mode = 2
+texture = ExtResource("5_xolgm")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="Panel2" type="Panel" parent="Panel/Panel/VBoxContainer" unique_id=1898775492]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.15
+theme_override_styles/panel = SubResource("StyleBoxFlat_ushea")
+
+[node name="BoxContainer" type="BoxContainer" parent="Panel/Panel/VBoxContainer/Panel2" unique_id=621917457]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -20.0
+offset_right = 33.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="Panel/Panel/VBoxContainer/Panel2/BoxContainer" unique_id=1954224443]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_nb4k0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ks8t7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wl5ax")
+text = "START"
+language = "pt_BR"
+
+[connection signal="pressed" from="Panel/Panel/VBoxContainer/Panel2/BoxContainer/Start" to="." method="_on_start_button_pressed"]

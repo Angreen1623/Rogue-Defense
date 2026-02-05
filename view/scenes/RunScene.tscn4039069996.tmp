@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://fw47674nx0ow"]
+
+[ext_resource type="PackedScene" uid="uid://du6oitejkdygm" path="res://views/enemy/enemy_view.tscn" id="1_a0ank"]
+[ext_resource type="Script" uid="uid://dk6en3ch7klll" path="res://views/mock/MockEnemySnapshot.gd" id="2_jtjss"]
+
+[node name="RunScene" type="Node2D" unique_id=1472480570]
+
+[node name="EnemyView" parent="." unique_id=990534278 instance=ExtResource("1_a0ank")]
+position = Vector2(65, 135)
+script = ExtResource("2_jtjss")
