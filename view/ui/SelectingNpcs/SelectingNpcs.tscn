@@ -115,23 +115,17 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 30
 
-[node name="ModelNpcContainer" type="AspectRatioContainer" parent="Panel/Panel/VBoxContainer/Panel/ScrollContainer/NpcsButtonsContainer" unique_id=727868962]
+[node name="ModelNpcButton" type="Button" parent="Panel/Panel/VBoxContainer/Panel/ScrollContainer/NpcsButtonsContainer" unique_id=68469892]
 unique_name_in_owner = true
 visible = false
-custom_minimum_size = Vector2(260.905, 0)
-layout_mode = 2
-ratio = 0.6667
-stretch_mode = 1
-alignment_horizontal = 0
-
-[node name="ModelNpcButton" type="Button" parent="Panel/Panel/VBoxContainer/Panel/ScrollContainer/NpcsButtonsContainer/ModelNpcContainer" unique_id=68469892]
+custom_minimum_size = Vector2(260, 0)
 layout_mode = 2
 theme_override_styles/normal = ExtResource("2_ihkuh")
 theme_override_styles/pressed = ExtResource("3_lnf3b")
 theme_override_styles/hover = ExtResource("4_01lgq")
 toggle_mode = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/VBoxContainer/Panel/ScrollContainer/NpcsButtonsContainer/ModelNpcContainer/ModelNpcButton" unique_id=1954216694]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/VBoxContainer/Panel/ScrollContainer/NpcsButtonsContainer/ModelNpcButton" unique_id=1954216694]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -140,7 +134,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 5
 
-[node name="Label" type="Label" parent="Panel/Panel/VBoxContainer/Panel/ScrollContainer/NpcsButtonsContainer/ModelNpcContainer/ModelNpcButton/VBoxContainer" unique_id=1064290327]
+[node name="Label" type="Label" parent="Panel/Panel/VBoxContainer/Panel/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer" unique_id=1064290327]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "<NPC NAME>"
@@ -148,7 +142,7 @@ horizontal_alignment = 1
 clip_text = true
 text_overrun_behavior = 5
 
-[node name="TextureRect" type="TextureRect" parent="Panel/Panel/VBoxContainer/Panel/ScrollContainer/NpcsButtonsContainer/ModelNpcContainer/ModelNpcButton/VBoxContainer" unique_id=1595556087]
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel/VBoxContainer/Panel/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer" unique_id=1595556087]
 layout_mode = 2
 texture = ExtResource("5_xolgm")
 expand_mode = 4

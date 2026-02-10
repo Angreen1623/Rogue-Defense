@@ -32,7 +32,7 @@ var model_button_settings = {
 }
 
 
-@onready var model_npc_container: AspectRatioContainer = %ModelNpcContainer
+@onready var model_npc_button: Button = %ModelNpcButton
 @onready var start_buttton = "$Panel/Panel/VBoxContainer/Panel2/Start"
 @onready var npcs_buttons_container: HBoxContainer = %NpcsButtonsContainer
 
@@ -59,26 +59,25 @@ func get_npc_sprite(id):
 
 func generate_buttons():
 	for npc in available_npcs:
-		var npc_button_container = get_npc_button_model()
-		var npc_button = npc_button_container.get_node("./ModelNpcButton")
+		var npc_button = get_npc_button_model()
 		var key = npc.id
 		
 		var label: Label = npc_button.get_node("VBoxContainer/Label")
 		var texture_rect: TextureRect = npc_button.get_node("VBoxContainer/TextureRect")
-		
+
 		label.text = npc.name
 		texture_rect.texture = get_npc_sprite(key)
 		npc_button.set_meta("npc", key)
 		
 		buttons.get_or_add(key, npc_button)
 		
-		npcs_buttons_container.add_child(npc_button_container)
+		npcs_buttons_container.add_child(npc_button)
 		npc_button.pressed.connect(_on_npc_button_pressed.bind(npc_button))
 
-func get_npc_button_model() -> AspectRatioContainer:
-	var npc_button_container = model_npc_container.duplicate()
-	npc_button_container.show()
-	return npc_button_container
+func get_npc_button_model() -> Button:
+	var npc_button = model_npc_button.duplicate()
+	npc_button.show()
+	return npc_button
 
 func add_npc(npc_id):
 	if selected_npcs_count >= max_npcs_selected:
