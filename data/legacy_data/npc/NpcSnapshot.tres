@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="NpcSnapshot" format=3 uid="uid://3rk60g3mqpn4"]
 
-[ext_resource type="Script" uid="uid://bmbqx1vwle7i4" path="res://mock/Snapshot/npc/NpcSnapshot.gd" id="1_2uibx"]
+[ext_resource type="Script" uid="uid://bmbqx1vwle7i4" path="res://data/legacy_data/npc/NpcSnapshot.gd" id="1_2uibx"]
 
 [resource]
 script = ExtResource("1_2uibx")

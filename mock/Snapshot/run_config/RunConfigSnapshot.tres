@@ -1,6 +1,0 @@
-[gd_resource type="Resource" format=3 uid="uid://7v4ewmxepk8s"]
-
-[ext_resource type="Script" uid="uid://bcstlsthiaylp" path="res://mock/Snapshot/run_config/RunConfigSnapshot.gd" id="1_i066x"]
-
-[resource]
-script = ExtResource("1_i066x")

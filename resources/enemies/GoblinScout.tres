@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemySnapshot" format=3 uid="uid://dftr458x29k1w"]
+
+[ext_resource type="Script" path="res://mock/Snapshot/enemy/EnemySnapshot.gd" id="1_snap"]
+
+[resource]
+script = ExtResource("1_snap")
+id = "goblin_scout"
+max_hp = 50
+speed = 80.0
+damage = 5
+sprite_frame = 0

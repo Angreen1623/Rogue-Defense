@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8j6y7z4x8k1w"]
+
+[ext_resource type="PackedScene" uid="uid://d3yvj7x4x8q5w" path="res://entities/Actor.tscn" id="1_actor"]
+[ext_resource type="Script" path="res://entities/player/Player.gd" id="2_player"]
+[ext_resource type="Script" path="res://components/TowerCombatComponent.gd" id="3_combat"]
+[ext_resource type="PackedScene" uid="uid://c2k8j3z1x9k2w" path="res://entities/projectiles/BaseProjectile.tscn" id="4_proj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_range"]
+radius = 300.0
+
+[node name="Player" instance=ExtResource("1_actor")]
+script = ExtResource("2_player")
+
+[node name="CollisionShape2D" parent="." index="0"]
+# Set appropriate shape for player via editor if needed, staying default for now
+
+[node name="RangeArea" type="Area2D" parent="." index="5"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea" index="0"]
+shape = SubResource("CircleShape2D_range")
+debug_color = Color(0, 0.6, 0.7, 0.42)
+
+[node name="TowerCombatComponent" type="Node" parent="." index="6" node_paths=PackedStringArray("range_area", "projectile_spawn_point")]
+script = ExtResource("3_combat")
+projectile_scene = ExtResource("4_proj")
+range_area = NodePath("../RangeArea")
+projectile_spawn_point = NodePath("..")
