@@ -73,6 +73,7 @@ func change_state(new_state_name: String) -> void:
 	current_state.enter()
 	
 	state_changed.emit(old_name, new_state.name)
+	EventBus.state_changed.emit(get_parent().get_instance_id(), old_name, new_state.name)
 
 
 ## Redireciona inputs para o estado atual.

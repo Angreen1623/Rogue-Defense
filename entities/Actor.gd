@@ -27,3 +27,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
     # StateMachine geralmente gerencia isso, mas se precisar de logica global, vem aqui.
     pass
+
+
+func _exit_tree() -> void:
+	EventBus.entity_despawned.emit(get_instance_id(), "removed")
