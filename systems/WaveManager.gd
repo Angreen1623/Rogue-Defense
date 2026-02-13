@@ -84,6 +84,10 @@ func spawn_enemy() -> void:
     
     get_tree().current_scene.add_child(enemy)
     enemies_alive += 1
+
+    var def_id = stats.id if stats else "unknown"
+    EventBus.entity_spawned.emit(enemy.get_instance_id(), def_id)
+
     # print_debug("[WaveManager] Inimigo criado em %s. Vivos: %d" % [spawn_pos, enemies_alive])
 
 

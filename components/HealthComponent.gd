@@ -39,6 +39,7 @@ func take_damage(amount: int) -> void:
 	print_debug("[%s] Levou %d de dano. HP: %d -> %d" % [get_parent().name, amount, old_hp, current_hp])
 	
 	health_changed.emit(current_hp, max_hp)
+	EventBus.entity_damaged.emit(get_parent().get_instance_id(), amount, null)
 
 	if current_hp <= 0:
 		print_debug("[%s] MORREU!" % [get_parent().name])
