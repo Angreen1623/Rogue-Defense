@@ -17,10 +17,14 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=952
-window/size/viewport_height=528
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/size/mode=3
 window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
 
 [gui]
 
@@ -36,7 +40,3 @@ theme/custom_font="uid://36uqtsfpuwos"
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/gut/plugin.cfg")

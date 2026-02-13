@@ -71,13 +71,13 @@ func generate_buttons():
 	var i := 0
 	for npc in available_npcs:
 		var npc_button_panel = get_npc_button_model(i)
-		var npc_button = npc_button_panel.get_node("AspectRatioContainer/VBoxContainer/VBoxContainer2/SelectNpcButton") 
+		var npc_button = npc_button_panel.get_node("VBoxContainer/VBoxContainer2/SelectNpcButton") 
 		var key = npc.id
 		
 		i +=1
 		
-		var npc_name: Label = npc_button_panel.get_node("AspectRatioContainer/VBoxContainer/VBoxContainer/NpcName")
-		var npc_sprite: TextureRect = npc_button_panel.get_node("AspectRatioContainer/VBoxContainer/VBoxContainer/Panel/NpcSprite")
+		var npc_name: Label = npc_button_panel.get_node("VBoxContainer/VBoxContainer/NpcName")
+		var npc_sprite: TextureRect = npc_button_panel.get_node("VBoxContainer/VBoxContainer/Panel/NpcSprite")
 		
 		npc_name.text = npc.name
 		npc_sprite.texture = get_npc_sprite(key)

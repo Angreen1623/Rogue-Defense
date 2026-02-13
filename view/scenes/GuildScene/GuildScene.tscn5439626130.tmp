@@ -22,7 +22,7 @@ anchor_mode = 0
 ignore_rotation = false
 limit_left = 0
 limit_top = 0
-limit_right = 2884
+limit_right = 1604
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1475675891]
 
