@@ -5,6 +5,8 @@
 [ext_resource type="StyleBox" uid="uid://ccwoqfbe535jq" path="res://view/ui/Themes/npc_model_button_purple.tres" id="2_sx88k"]
 [ext_resource type="Script" uid="uid://3dxks0ymphyc" path="res://view/ui/SelectingNpcs/model_npc_button_panel.gd" id="3_sx88k"]
 [ext_resource type="Texture2D" uid="uid://c75jrp57x4wfs" path="res://icon.svg" id="5_xolgm"]
+[ext_resource type="StyleBox" uid="uid://cougiaikoix52" path="res://view/ui/Themes/npc_button_pressed.tres" id="6_3i803"]
+[ext_resource type="StyleBox" uid="uid://cy2fjb7rfkc6c" path="res://view/ui/Themes/npc_button_hover.tres" id="7_ln7tu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sx88k"]
 bg_color = Color(0.28627452, 0.3019608, 0.49411765, 1)
@@ -55,13 +57,6 @@ corner_radius_top_left = 1000
 corner_radius_top_right = 1000
 corner_radius_bottom_right = 1000
 corner_radius_bottom_left = 1000
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ks8t7"]
-bg_color = Color(0.31580526, 0.31580526, 0.31580526, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl5ax"]
 bg_color = Color(0.6, 0.6, 0.6, 0.63529414)
@@ -126,6 +121,10 @@ offset_bottom = 65.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 64
 text = "Amiguinhos"
+
+[node name="Container2" type="Container" parent="Panel/Panel/VBoxContainer" unique_id=1877838291]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
 
 [node name="Panel2" type="Panel" parent="Panel/Panel/VBoxContainer" unique_id=1648544317]
 layout_mode = 2
@@ -281,22 +280,27 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = ExtResource("2_ihkuh")
+theme_override_styles/pressed = ExtResource("6_3i803")
+theme_override_styles/hover = ExtResource("7_ln7tu")
 toggle_mode = true
 text = "Selecionar"
+
+[node name="Container" type="Container" parent="Panel/Panel/VBoxContainer" unique_id=636443867]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
 
 [node name="BoxContainer" type="BoxContainer" parent="Panel/Panel/VBoxContainer" unique_id=621917457]
 custom_minimum_size = Vector2(400, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 0
-size_flags_stretch_ratio = 35.4
+size_flags_vertical = 8
 
 [node name="Start" type="Button" parent="Panel/Panel/VBoxContainer/BoxContainer" unique_id=1954224443]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_nb4k0")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ks8t7")
+theme_override_styles/pressed = ExtResource("6_3i803")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wl5ax")
 text = "Jogar"
 language = "pt_BR"

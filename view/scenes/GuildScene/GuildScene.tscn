@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b4k1g6fevm02y" path="res://view/scenes/GuildScene/guild_scene.gd" id="1_xnhsj"]
 [ext_resource type="Texture2D" uid="uid://cp7rqltih3pr" path="res://view/assets/background/Gemini_Generated_Image_1ongg71ongg71ong.png" id="2_2lwi5"]
 [ext_resource type="Script" uid="uid://dijo1exln1t76" path="res://view/scenes/GuildScene/node_2d.gd" id="2_6whvy"]
-[ext_resource type="PackedScene" uid="uid://cmf8lktsaniii" path="res://view/ui/Guild/guild_ui.tscn" id="2_hdvn1"]
+[ext_resource type="PackedScene" uid="uid://cmf8lktsaniii" path="res://view/ui/Guild/GuildUi.tscn" id="2_hdvn1"]
 [ext_resource type="PackedScene" uid="uid://da34n51ibanh7" path="res://view/ui/SelectingNpcs/SelectingNpcs.tscn" id="4_hdvn1"]
 
 [node name="GuildScene" type="Node" unique_id=42823202]

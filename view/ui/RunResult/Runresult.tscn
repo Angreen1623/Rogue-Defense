@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dbn2sy5d2ct47"]
 
-[ext_resource type="FontFile" uid="uid://36uqtsfpuwos" path="res://view/assets/fontes/KCObraLetraRegular.ttf" id="1_4jjqs"]
+[ext_resource type="FontFile" uid="uid://36uqtsfpuwos" path="res://view/assets/fontes/KCObraLetraRegular.ttf" id="1_k74ui"]
+[ext_resource type="Theme" uid="uid://c7wk3jqvykfru" path="res://view/ui/Themes/font_h2.tres" id="2_w8b2e"]
+[ext_resource type="Theme" uid="uid://bbr7x4ga0rwkf" path="res://view/ui/Themes/font_h4.tres" id="3_8l58q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5caol"]
 bg_color = Color(0, 0, 0, 0.11764706)
@@ -24,6 +26,30 @@ corner_radius_top_right = 1000
 corner_radius_bottom_right = 1000
 corner_radius_bottom_left = 1000
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d5q3b"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 1000
+corner_radius_top_right = 1000
+corner_radius_bottom_right = 1000
+corner_radius_bottom_left = 1000
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k74ui"]
+bg_color = Color(0.21176471, 0.21176471, 0.21176471, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.2123048, 0.21230489, 0.21230468, 1)
+corner_radius_top_left = 1000
+corner_radius_top_right = 1000
+corner_radius_bottom_right = 1000
+corner_radius_bottom_left = 1000
+
 [node name="Runresult" type="Control" unique_id=1118917770]
 layout_mode = 3
 anchors_preset = 15
@@ -42,7 +68,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5caol")
 
 [node name="Panel" type="Panel" parent="Panel" unique_id=1719755119]
-custom_minimum_size = Vector2(430, 250)
+custom_minimum_size = Vector2(600, 300)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -57,30 +83,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_4jjqs")
 
-[node name="Button" type="Button" parent="Panel/Panel" unique_id=434644243]
-custom_minimum_size = Vector2(120, 32)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -120.0
-offset_top = -32.0
-offset_right = -10.0
-offset_bottom = -10.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_4jjqs")
-theme_override_font_sizes/font_size = 12
-theme_override_styles/normal = SubResource("StyleBoxFlat_gw18n")
-text = "Continuar"
-
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel" unique_id=1839767191]
 layout_mode = 1
 anchors_preset = -1
@@ -94,44 +96,78 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="Panel/Panel/VBoxContainer" unique_id=1687558435]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme = ExtResource("2_w8b2e")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_4jjqs")
-theme_override_font_sizes/font_size = 34
+theme_override_fonts/font = ExtResource("1_k74ui")
 text = "Rodada Concluída"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="Panel/Panel/VBoxContainer" unique_id=1007580203]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/VBoxContainer" unique_id=237094967]
 layout_mode = 2
+theme_override_constants/separation = 36
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/VBoxContainer/VBoxContainer" unique_id=1930918375]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Panel/Panel/VBoxContainer/VBoxContainer/VBoxContainer" unique_id=1007580203]
+layout_mode = 2
+theme = ExtResource("3_8l58q")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_4jjqs")
-theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = ExtResource("1_k74ui")
 text = "Ouro coletado: 000"
 
-[node name="Label3" type="Label" parent="Panel/Panel/VBoxContainer" unique_id=167417398]
+[node name="Label3" type="Label" parent="Panel/Panel/VBoxContainer/VBoxContainer/VBoxContainer" unique_id=167417398]
 layout_mode = 2
+theme = ExtResource("3_8l58q")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_4jjqs")
-theme_override_font_sizes/font_size = 16
-text = "Pratos feitos coletados: 000
-"
+theme_override_fonts/font = ExtResource("1_k74ui")
+text = "Pratos feitos coletados: 000"
 
-[node name="Label4" type="Label" parent="Panel/Panel/VBoxContainer" unique_id=1280668358]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/Panel/VBoxContainer/VBoxContainer" unique_id=1720998252]
 layout_mode = 2
+
+[node name="Label4" type="Label" parent="Panel/Panel/VBoxContainer/VBoxContainer/VBoxContainer2" unique_id=1280668358]
+layout_mode = 2
+theme = ExtResource("3_8l58q")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_4jjqs")
-theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = ExtResource("1_k74ui")
 text = "Inimigos mortos: 000"
 
-[node name="Label5" type="Label" parent="Panel/Panel/VBoxContainer" unique_id=1194749353]
+[node name="Label5" type="Label" parent="Panel/Panel/VBoxContainer/VBoxContainer/VBoxContainer2" unique_id=1194749353]
 layout_mode = 2
+theme = ExtResource("3_8l58q")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_4jjqs")
-theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = ExtResource("1_k74ui")
 text = "Aliados desmaiados: 000"
 
-[node name="Label6" type="Label" parent="Panel/Panel/VBoxContainer" unique_id=1479677972]
+[node name="Label6" type="Label" parent="Panel/Panel/VBoxContainer/VBoxContainer/VBoxContainer2" unique_id=1479677972]
 layout_mode = 2
+theme = ExtResource("3_8l58q")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_4jjqs")
-theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = ExtResource("1_k74ui")
 text = "Dano sofrido: 00"
+
+[node name="Button" type="Button" parent="Panel/Panel" unique_id=434644243]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -50.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_k74ui")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gw18n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d5q3b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k74ui")
+text = "Continuar"
