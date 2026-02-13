@@ -7,7 +7,7 @@
 [ext_resource type="StyleBox" uid="uid://cougiaikoix52" path="res://view/ui/Themes/npc_button_pressed.tres" id="5_rg7le"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7x7gg"]
-bg_color = Color(0.15294118, 0.15294118, 0.26666668, 1)
+bg_color = Color(0.7764706, 0.62352943, 0.64705884, 1)
 corner_radius_top_left = 1000
 corner_radius_top_right = 1000
 corner_radius_bottom_right = 1000
@@ -62,12 +62,12 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=880884202]
 layout_mode = 2
 
-[node name="WoodLabel" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=56834427]
+[node name="MoneyLabel" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=56834427]
 layout_mode = 2
 theme = ExtResource("2_j3yx4")
-text = "Madeira:"
+text = "Dinheiro:"
 
-[node name="WoodValueLabel" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1831251862]
+[node name="MoneyValueLabel" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1831251862]
 layout_mode = 2
 theme = ExtResource("2_j3yx4")
 text = "000"
@@ -75,12 +75,12 @@ text = "000"
 [node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=877975187]
 layout_mode = 2
 
-[node name="StoneLabel" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1172916977]
+[node name="FoodLabel" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1172916977]
 layout_mode = 2
 theme = ExtResource("2_j3yx4")
-text = "Pedra:"
+text = "PF:"
 
-[node name="StoneValueLabel" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=487030482]
+[node name="FoodValueLabel" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=487030482]
 layout_mode = 2
 theme = ExtResource("2_j3yx4")
 text = "000"
