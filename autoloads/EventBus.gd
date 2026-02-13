@@ -30,43 +30,43 @@ extends Node
 ## @param entity_id: ID unico da entidade ferida.
 ## @param amount: Quantidade de dano recebido.
 ## @param source: O nodo que causou o dano (pode ser null).
-signal entity_damaged(entity_id: int, amount: int, source: Node)
+#########signal entity_damaged(entity_id: int, amount: int, source: Node)
 
 ## Emitido quando uma entidade morre (HP chega a 0).
 ## @param entity_id: ID unico da entidade que morreu.
-signal entity_died(entity_id: int)
+####################signal entity_died(entity_id: int)
 
 ## Emitido quando uma entidade recupera vida.
 ## @param entity_id: ID unico da entidade curada.
 ## @param amount: Quantidade de vida recuperada.
-signal entity_healed(entity_id: int, amount: int)
+######################signal entity_healed(entity_id: int, amount: int)
 
 ## ============================================================================
 ## SKILL EVENTS (Eventos de Habilidades)
 ## ============================================================================
 ## Emitido quando uma habilidade e usada.
-signal skill_used(caster_id: int, skill_id: String, target: Vector2)
+##################signal skill_used(caster_id: int, skill_id: String, target: Vector2)
 
 ## Emitido quando um efeito de status e aplicado (ex: veneno, slow).
-signal effect_applied(target_id: int, effect_id: String)
+###############signal effect_applied(target_id: int, effect_id: String)
 
 ## Emitido quando uma habilidade entra em recarga (cooldown).
-signal cooldown_started(entity_id: int, skill_id: String, duration: float)
+#############signal cooldown_started(entity_id: int, skill_id: String, duration: float)
 
 ## ============================================================================
 ## LOOT EVENTS (Eventos de Saque/Itens)
 ## ============================================================================
 ## Emitido quando um inimigo dropa um item no chao.
-signal loot_dropped(position: Vector2, loot_table_id: String)
+###########################signal loot_dropped(position: Vector2, loot_table_id: String)
 
 ## Emitido quando uma entidade pega um item do chao.
-signal item_picked_up(entity_id: int, item_id: String)
+##########################signal item_picked_up(entity_id: int, item_id: String)
 
 ## ============================================================================
 ## STATE EVENTS (Eventos de Estado)
 ## ============================================================================
 ## Emitido quando o Estado de uma entidade muda (ex: de 'Idle' para 'Run').
-signal state_changed(entity_id: int, old_state: String, new_state: String)
+#######################signal state_changed(entity_id: int, old_state: String, new_state: String)
 
 
 ## ============================================================================
@@ -75,10 +75,10 @@ signal state_changed(entity_id: int, old_state: String, new_state: String)
 
 ## Emitido quando uma entidade e criada (spawnada) no mundo.
 ## Util para sitemas que precisam rastrear todas as entidades vivas.
-signal entity_spawned(eid: int, def_id: String)
+##########################signal entity_spawned(eid: int, def_id: String)
 
 ## Emitido quando uma entidade e removida do jogo (despawnada).
-signal entity_despawned(eid: int, reason: String)
+########################signal entity_despawned(eid: int, reason: String)
 
 
 ## Funcao chamada automaticamente pelo Godot quando o jogo comeca.

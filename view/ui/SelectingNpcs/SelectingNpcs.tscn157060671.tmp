@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://da34n51ibanh7"]
 
 [ext_resource type="Script" uid="uid://d0rh8l5gdmvjd" path="res://view/ui/SelectingNpcs/SelectingNpcs.gd" id="1_ynnbe"]
+[ext_resource type="Script" uid="uid://cpg6gg6ybx663" path="res://view/ui/SelectingNpcs/model_npc_button.gd" id="2_7ptyv"]
 [ext_resource type="StyleBox" uid="uid://ut7fn6457uqd" path="res://view/ui/Themes/npc_button_normal.tres" id="2_ihkuh"]
-[ext_resource type="StyleBox" uid="uid://ccwoqfbe535jq" path="res://view/ui/Themes/npc_model_button_purple.tres" id="2_sx88k"]
-[ext_resource type="Script" uid="uid://3dxks0ymphyc" path="res://view/ui/SelectingNpcs/model_npc_button_panel.gd" id="3_sx88k"]
 [ext_resource type="Texture2D" uid="uid://c75jrp57x4wfs" path="res://icon.svg" id="5_xolgm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sx88k"]
@@ -17,6 +16,17 @@ bg_color = Color(0.28627452, 0.3019608, 0.49411765, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ln7tu"]
 draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0a8p"]
+bg_color = Color(0.15294118, 0.15294118, 0.26666668, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7levu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7vr0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rh0f"]
 bg_color = Color(0.94509804, 0.91764706, 1, 1)
@@ -95,9 +105,9 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 30.0
-offset_top = 10.0
+offset_top = 25.0
 offset_right = -30.0
-offset_bottom = -10.0
+offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_7ptyv")
@@ -150,35 +160,34 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 30
 
-[node name="ModelNpcButtonPanel" type="Panel" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer" unique_id=1561664695]
+[node name="ModelNpcButton" type="Button" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer" unique_id=603305733]
 unique_name_in_owner = true
-visible = false
-custom_minimum_size = Vector2(266, 0)
+custom_minimum_size = Vector2(260, 0)
 layout_mode = 2
-size_flags_horizontal = 0
-theme_override_styles/panel = ExtResource("2_sx88k")
-script = ExtResource("3_sx88k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h0a8p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7levu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j7vr0")
+toggle_mode = true
+script = ExtResource("2_7ptyv")
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel" unique_id=1552066716]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton" unique_id=1455474213]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 19.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer" unique_id=1455474213]
-layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer" unique_id=1280902983]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer" unique_id=1280902983]
 layout_mode = 2
 theme_override_constants/separation = 3
 
-[node name="Container" type="Container" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer/VBoxContainer" unique_id=1155365794]
+[node name="Container" type="Container" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer/VBoxContainer" unique_id=1155365794]
 layout_mode = 2
 
-[node name="NpcName" type="Label" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer/VBoxContainer" unique_id=949918205]
+[node name="Label" type="Label" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer/VBoxContainer" unique_id=949918205]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "<NPC NAME>"
@@ -186,13 +195,13 @@ horizontal_alignment = 1
 clip_text = true
 text_overrun_behavior = 5
 
-[node name="Panel" type="Panel" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer/VBoxContainer" unique_id=791611596]
-custom_minimum_size = Vector2(180, 180)
+[node name="Panel" type="Panel" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer/VBoxContainer" unique_id=791611596]
+custom_minimum_size = Vector2(190, 190)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_8rh0f")
 
-[node name="NpcSprite" type="TextureRect" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer/VBoxContainer/Panel" unique_id=952876778]
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer/VBoxContainer/Panel" unique_id=952876778]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.12
@@ -205,7 +214,7 @@ texture = ExtResource("5_xolgm")
 expand_mode = 3
 stretch_mode = 4
 
-[node name="Panel" type="Panel" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer/VBoxContainer/Panel" unique_id=638929920]
+[node name="Panel" type="Panel" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer/VBoxContainer/Panel" unique_id=638929920]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -213,14 +222,14 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_top = -21.100006
+offset_right = 25.0
+offset_bottom = 23.899994
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_2w8aa")
 
-[node name="TextureRect" type="TextureRect" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer/VBoxContainer/Panel/Panel" unique_id=152761143]
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer/VBoxContainer/Panel/Panel" unique_id=152761143]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -228,21 +237,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer" unique_id=2122870115]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer" unique_id=2122870115]
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
 
-[node name="HealthContainer" type="HBoxContainer" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer/VBoxContainer2" unique_id=684615936]
+[node name="HealthContainer" type="HBoxContainer" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer/VBoxContainer2" unique_id=684615936]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer/VBoxContainer2/HealthContainer" unique_id=1624909552]
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer/VBoxContainer2/HealthContainer" unique_id=1624909552]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer/VBoxContainer2/HealthContainer" unique_id=1343188241]
+[node name="ProgressBar" type="ProgressBar" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer/VBoxContainer2/HealthContainer" unique_id=1343188241]
 custom_minimum_size = Vector2(0, 2)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -252,14 +261,14 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_lrobd")
 value = 66.06
 show_percentage = false
 
-[node name="HungerContainer" type="HBoxContainer" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer/VBoxContainer2" unique_id=1612001132]
+[node name="HungerContainer" type="HBoxContainer" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer/VBoxContainer2" unique_id=1612001132]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer/VBoxContainer2/HungerContainer" unique_id=1725195223]
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer/VBoxContainer2/HungerContainer" unique_id=1725195223]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer/VBoxContainer2/HungerContainer" unique_id=1699707672]
+[node name="ProgressBar" type="ProgressBar" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer/VBoxContainer2/HungerContainer" unique_id=1699707672]
 custom_minimum_size = Vector2(0, 2)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -269,7 +278,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_lrobd")
 value = 66.06
 show_percentage = false
 
-[node name="SelectNpcButton" type="Button" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButtonPanel/AspectRatioContainer/VBoxContainer/VBoxContainer2" unique_id=577033580]
+[node name="Button" type="Button" parent="Panel/Panel/VBoxContainer/Panel2/ScrollContainer/NpcsButtonsContainer/ModelNpcButton/VBoxContainer/VBoxContainer2" unique_id=577033580]
 custom_minimum_size = Vector2(125, 30)
 layout_mode = 2
 size_flags_horizontal = 4

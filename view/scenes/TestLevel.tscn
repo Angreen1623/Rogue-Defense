@@ -1,30 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddy6j7x4x8k1w"]
+[gd_scene format=3 uid="uid://ddy6j7x4x8k1w"]
 
-[ext_resource type="PackedScene" uid="uid://c8j6y7z4x8k1w" path="res://entities/player/Player.tscn" id="1_player"]
-[ext_resource type="Script" path="res://systems/WaveManager.gd" id="2_wave"]
-[ext_resource type="PackedScene" uid="uid://b4k2j9z4x8k1w" path="res://view/ui/MainHUD.tscn" id="3_hud"]
-[ext_resource type="PackedScene" uid="uid://b8j2y9z4x8k1w" path="res://entities/enemies/BaseEnemy.tscn" id="4_enemy"]
+[ext_resource type="PackedScene" uid="uid://c8j6y704x8k1w" path="res://entities/player/Player.tscn" id="1_player"]
+[ext_resource type="Script" uid="uid://bh2c48w6fqqqh" path="res://systems/WaveManager.gd" id="2_wave"]
+[ext_resource type="PackedScene" uid="uid://b4k2ka04x8k1w" path="res://view/ui/MainHUD.tscn" id="3_hud"]
 
-[node name="TestLevel" type="Node2D"]
+[node name="TestLevel" type="Node2D" unique_id=180365350]
 
-[node name="Player" parent="." instance=ExtResource("1_player")]
+[node name="Player" parent="." unique_id=1131344321 instance=ExtResource("1_player")]
 position = Vector2(576, 324)
 
-[node name="WaveManager" type="Node" parent="."]
+[node name="WaveManager" type="Node" parent="." unique_id=2116538344]
 unique_name_in_owner = true
 script = ExtResource("2_wave")
 spawn_radius = 400.0
-center_point = Vector2(576, 324)
-enemy_scene = ExtResource("4_enemy")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=795351061]
 position = Vector2(576, 324)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1395507158]
 
-[node name="MainHUD" parent="CanvasLayer" instance=ExtResource("3_hud")]
+[node name="MainHUD" parent="CanvasLayer" unique_id=658306223 instance=ExtResource("3_hud")]
 
-[node name="DebugStartButton" type="Button" parent="CanvasLayer"]
+[node name="DebugStartButton" type="Button" parent="CanvasLayer" unique_id=205979568]
 offset_left = 20.0
 offset_top = 80.0
 offset_right = 140.0

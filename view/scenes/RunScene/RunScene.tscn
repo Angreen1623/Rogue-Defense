@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ctykuw58jnjs0" path="res://view/scenes/RunScene/node_2d.gd" id="2_ccl4p"]
 [ext_resource type="Texture2D" uid="uid://8wuwnmbuijxf" path="res://view/assets/background/background.png" id="2_jtjss"]
-[ext_resource type="PackedScene" uid="uid://biqf57jeuninp" path="res://view/ui/RunUi/run_ui.tscn" id="3_cgcwc"]
+[ext_resource type="PackedScene" uid="uid://biqf57jeuninp" path="res://view/ui/Run/run_ui.tscn" id="3_cgcwc"]
 
 [node name="RunScene" type="Node" unique_id=2141480253]
 

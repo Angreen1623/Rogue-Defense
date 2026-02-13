@@ -58,7 +58,7 @@ func change_state(new_state_name: String) -> void:
 	if new_state == current_state:
 		return
 	
-	var old_name := current_state.name if current_state else "None"
+	var old_name = current_state.name if current_state else "None"
 	
 	print_debug("[%s] Transicao de Estado: %s -> %s" % [get_parent().name, old_name, new_state.name])
 	

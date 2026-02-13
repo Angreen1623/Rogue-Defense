@@ -70,6 +70,6 @@ func _on_area_entered(area: Area2D) -> void:
 
 		# Aplica empurrao (Knockback) se o alvo se move (CharacterBody2D)
 		if knockback_force > 0 and target is CharacterBody2D:
-			var direction := (target.global_position - global_position).normalized()
+			var direction = (target.global_position - global_position).normalized()
 			target.velocity += direction * knockback_force
 			print_debug("[%s] Aplicou knockback em %s" % [get_parent().name, target.name])

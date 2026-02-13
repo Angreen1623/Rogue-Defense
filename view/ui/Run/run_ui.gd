@@ -28,7 +28,7 @@ var npcs_sprites := {
 
 func _ready() -> void:
 	# Pega os dados globais
-	selected_npcs = RunConfigSnapshot.get_RunConfig_snapshot()
+	selected_npcs = run_config.get_RunConfig_snapshot()
 	
 	if selected_npcs == null:
 		print_debug("[RunUi] Nenhum NPC selecionado.")

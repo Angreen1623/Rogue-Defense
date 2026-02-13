@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0xtumgff7f8w"
-path="res://.godot/imported/5.png-a27691486ae65e621197cbab508f5b97.ctex"
+uid="uid://cecu15p6iply7"
+path="res://.godot/imported/madeira.png-acad0ebe5870fb1f1092956189efd82d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://view/assets/npcsprites/5.png"
-dest_files=["res://.godot/imported/5.png-a27691486ae65e621197cbab508f5b97.ctex"]
+source_file="res://view/assets/madeira.png"
+dest_files=["res://.godot/imported/madeira.png-acad0ebe5870fb1f1092956189efd82d.ctex"]
 
 [params]
 

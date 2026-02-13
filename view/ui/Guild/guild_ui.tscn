@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c1pc6icjxhn58" path="res://view/scenes/GuildScene/guild_ui.gd" id="1_dg5a0"]
 [ext_resource type="StyleBox" uid="uid://ut7fn6457uqd" path="res://view/ui/Themes/npc_button_normal.tres" id="2_0h4gf"]
+[ext_resource type="FontFile" uid="uid://36uqtsfpuwos" path="res://view/assets/fontes/KCObraLetraRegular.ttf" id="2_53hpq"]
 [ext_resource type="StyleBox" uid="uid://cougiaikoix52" path="res://view/ui/Themes/npc_button_pressed.tres" id="3_5k0mm"]
 [ext_resource type="StyleBox" uid="uid://cy2fjb7rfkc6c" path="res://view/ui/Themes/npc_button_hover.tres" id="4_pugh1"]
 
@@ -33,6 +34,7 @@ layout_mode = 2
 
 [node name="HpLabel" type="Label" parent="HBoxContainer/BoxContainer/HBoxContainer" unique_id=1751944799]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_53hpq")
 text = "Vida:"
 
 [node name="HpValueLabel" type="Label" parent="HBoxContainer/BoxContainer/HBoxContainer" unique_id=1464591210]
@@ -79,12 +81,13 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="StartRun" type="Button" parent="BoxContainer" unique_id=764324240]
-custom_minimum_size = Vector2(160, 0)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = ExtResource("2_0h4gf")
 theme_override_styles/pressed = ExtResource("3_5k0mm")
 theme_override_styles/hover = ExtResource("4_pugh1")
-text = "START RUN"
+text = "Começar partida"
 
 [connection signal="pressed" from="BoxContainer/StartRun" to="." method="_on_start_run_pressed"]

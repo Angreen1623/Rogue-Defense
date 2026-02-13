@@ -15,18 +15,17 @@ run/main_scene="uid://b5kw620khnrhh"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[autoload]
-
-EventBus="*res://autoloads/EventBus.gd"
-GameManager="*res://systems/GameManager.gd"
-SnapshotLoader="*res://systems/SnapshotLoader.gd"
-
 [display]
 
 window/size/viewport_width=952
 window/size/viewport_height=528
 window/size/mode=3
 window/stretch/mode="canvas_items"
+
+[gui]
+
+fonts/dynamic_fonts/use_oversampling=false
+theme/custom_font="uid://36uqtsfpuwos"
 
 [physics]
 
