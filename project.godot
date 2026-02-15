@@ -13,7 +13,13 @@ config_version=5
 config/name="Rogue Defense"
 run/main_scene="uid://b5kw620khnrhh"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://c74mebjh4xq5p"
+
+[autoload]
+
+EventBus="*uid://b77io8e600xai"
+GameManager="*uid://lu1wtq27cnr"
+SnapshotLoader="*uid://ck77flqvkjsd0"
 
 [display]
 

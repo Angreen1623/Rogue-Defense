@@ -4,7 +4,7 @@
 [ext_resource type="StyleBox" uid="uid://ut7fn6457uqd" path="res://view/ui/Themes/npc_button_normal.tres" id="2_ihkuh"]
 [ext_resource type="StyleBox" uid="uid://ccwoqfbe535jq" path="res://view/ui/Themes/npc_model_button_purple.tres" id="2_sx88k"]
 [ext_resource type="Script" uid="uid://3dxks0ymphyc" path="res://view/ui/SelectingNpcs/model_npc_button_panel.gd" id="3_sx88k"]
-[ext_resource type="Texture2D" uid="uid://c75jrp57x4wfs" path="res://icon.svg" id="5_xolgm"]
+[ext_resource type="Texture2D" uid="uid://c74mebjh4xq5p" path="res://icon.png" id="5_xolgm"]
 [ext_resource type="StyleBox" uid="uid://cougiaikoix52" path="res://view/ui/Themes/npc_button_pressed.tres" id="6_3i803"]
 [ext_resource type="StyleBox" uid="uid://cy2fjb7rfkc6c" path="res://view/ui/Themes/npc_button_hover.tres" id="7_ln7tu"]
 

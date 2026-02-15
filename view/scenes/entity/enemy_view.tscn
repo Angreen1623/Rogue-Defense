@@ -1,30 +1,34 @@
-[gd_scene format=3 uid="uid://du6oitejkdygm"]
+[gd_scene format=3 uid="uid://qp8y3amsyh4w"]
 
-[ext_resource type="Texture2D" uid="uid://bg2jvb27f3bqp" path="res://view/assets/enemy/Walk.png" id="1_pe6kk"]
-[ext_resource type="Script" uid="uid://1unysd15fm1l" path="res://view/views/enemy/enemy_view.gd" id="1_uyons"]
+[ext_resource type="Script" uid="uid://cqgg84g7tv2qp" path="res://entities/enemies/BaseEnemy.gd" id="1_qp4xv"]
+[ext_resource type="Texture2D" uid="uid://bg2jvb27f3bqp" path="res://view/assets/enemy/Walk.png" id="2_guc08"]
+[ext_resource type="Script" uid="uid://cnyi2mb0pbks0" path="res://components/HealthComponent.gd" id="3_oarlb"]
+[ext_resource type="Script" uid="uid://dxhsv6nu8kud5" path="res://components/MovementComponent.gd" id="4_37fuy"]
+[ext_resource type="Script" uid="uid://cly7y66ugkam5" path="res://components/StateMachine.gd" id="5_o2byo"]
+[ext_resource type="Script" uid="uid://uplqilcyc0e7" path="res://components/HurtboxComponent.gd" id="6_1jc7n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uyons"]
-atlas = ExtResource("1_pe6kk")
+atlas = ExtResource("2_guc08")
 region = Rect2(0, 0, 22, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r2wbd"]
-atlas = ExtResource("1_pe6kk")
+atlas = ExtResource("2_guc08")
 region = Rect2(22, 0, 22, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ljwtb"]
-atlas = ExtResource("1_pe6kk")
+atlas = ExtResource("2_guc08")
 region = Rect2(66, 0, 22, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4b6ve"]
-atlas = ExtResource("1_pe6kk")
+atlas = ExtResource("2_guc08")
 region = Rect2(44, 0, 22, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0eb5c"]
-atlas = ExtResource("1_pe6kk")
+atlas = ExtResource("2_guc08")
 region = Rect2(88, 0, 22, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jm755"]
-atlas = ExtResource("1_pe6kk")
+atlas = ExtResource("2_guc08")
 region = Rect2(110, 0, 22, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_steqt"]
@@ -58,12 +62,26 @@ size = Vector2(14, 17)
 
 [node name="EnemyView" type="CharacterBody2D" unique_id=1245913154]
 scale = Vector2(2, 2.008)
-script = ExtResource("1_uyons")
+script = ExtResource("1_qp4xv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=375717315]
+position = Vector2(2, -2.4422317)
 sprite_frames = SubResource("SpriteFrames_steqt")
 frame_progress = 0.8893702
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=451108944]
-position = Vector2(-2, 2.5)
+position = Vector2(0, 0.057768345)
 shape = SubResource("RectangleShape2D_r2wbd")
+
+[node name="HealthComponent" type="Node" parent="." unique_id=993908341]
+script = ExtResource("3_oarlb")
+
+[node name="MovementComponent" type="Node" parent="." unique_id=192082618]
+script = ExtResource("4_37fuy")
+
+[node name="StateMachine" type="Node" parent="." unique_id=857903110]
+script = ExtResource("5_o2byo")
+
+[node name="HurtboxComponent" type="Area2D" parent="." unique_id=284270291]
+position = Vector2(0, 0.05776834)
+script = ExtResource("6_1jc7n")

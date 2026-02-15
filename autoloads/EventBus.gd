@@ -34,7 +34,7 @@ extends Node
 
 ## Emitido quando uma entidade morre (HP chega a 0).
 ## @param entity_id: ID unico da entidade que morreu.
-####################signal entity_died(entity_id: int)
+signal entity_died(entity_id: int)
 
 ## Emitido quando uma entidade recupera vida.
 ## @param entity_id: ID unico da entidade curada.
