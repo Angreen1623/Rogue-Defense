@@ -21,13 +21,6 @@ EventBus="*uid://b77io8e600xai"
 GameManager="*uid://lu1wtq27cnr"
 SnapshotLoader="*uid://ck77flqvkjsd0"
 
-[autoload]
-
-EventBus="*res://autoloads/EventBus.gd"
-Routes="*res://autoloads/Routes.gd"
-SnapshotLoader="*res://systems/SnapshotLoader.gd"
-GameManager="*res://systems/GameManager.gd"
-
 [display]
 
 window/size/viewport_width=1280
@@ -37,7 +30,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+enabled=PackedStringArray()
 
 [gui]
 

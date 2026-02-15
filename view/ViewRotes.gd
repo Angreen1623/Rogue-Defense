@@ -1,4 +1,5 @@
 extends Node
+class_name Routes
 
 ## ============================================================================
 ## UTILITARIO: ViewRotes (Rotas de Cena)
@@ -12,7 +13,6 @@ extends Node
 const routes := {
 	"run_scene": preload("uid://fw47674nx0ow"),   # Cena da Partida
 	"guild_scene": preload("uid://b5kw620khnrhh"), # Cena da Guilda (Menu Principal)
-	"enemy_scene": preload("uid://b8j20a04x8k1w")
 }
 
 ## Retorna a cena correspondente ao ID.
