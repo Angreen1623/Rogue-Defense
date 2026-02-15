@@ -21,8 +21,7 @@ const MAX_WAVES: int = 5 # Definicao estatica de quantas ondas existem
 func _ready() -> void:
 	# Conecta nos sinais globais do EventBus
 	EventBus.entity_died.connect(_on_entity_died)
-	# Supondo que alguem emita wave_completed (provavelmente o WaveManager)
-	# EventBus.wave_completed.connect(_on_wave_completed) # Comentado pois nao vi no EventBus original, verificar!
+	EventBus.wave_completed.connect(_on_wave_completed)
 	
 	print_debug("[GameManager] Jogo pronto. Aguardando inicio...")
 	is_game_active = true

@@ -1,24 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3yvj7x4x8q5w"]
+[gd_scene format=3 uid="uid://d3yvj7x4x8q5w"]
 
-[ext_resource type="Script" path="res://entities/Actor.gd" id="1_actor"]
-[ext_resource type="Script" path="res://components/HealthComponent.gd" id="2_health"]
-[ext_resource type="Script" path="res://components/MovementComponent.gd" id="3_movement"]
-[ext_resource type="Script" path="res://components/HurtboxComponent.gd" id="4_hurtbox"]
-[ext_resource type="Script" path="res://components/StateMachine.gd" id="5_fsm"]
+[ext_resource type="Script" uid="uid://dxv0o5fea8o2m" path="res://entities/Actor.gd" id="1_actor"]
+[ext_resource type="Script" uid="uid://cnyi2mb0pbks0" path="res://components/HealthComponent.gd" id="2_health"]
+[ext_resource type="Script" uid="uid://dxhsv6nu8kud5" path="res://components/MovementComponent.gd" id="3_movement"]
+[ext_resource type="Script" uid="uid://dy6qvkb25psh2" path="res://components/HurtboxComponent.gd" id="4_hurtbox"]
+[ext_resource type="Script" uid="uid://cly7y66ugkam5" path="res://components/StateMachine.gd" id="5_fsm"]
 
-[node name="Actor" type="CharacterBody2D"]
+[node name="Actor" type="CharacterBody2D" unique_id=1895526411]
 script = ExtResource("1_actor")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=173885011]
 
-[node name="HealthComponent" type="Node" parent="."]
+[node name="HealthComponent" type="Node" parent="." unique_id=1227954487]
 script = ExtResource("2_health")
 
-[node name="MovementComponent" type="Node" parent="."]
+[node name="MovementComponent" type="Node" parent="." unique_id=1812181]
 script = ExtResource("3_movement")
 
-[node name="HurtboxComponent" type="Area2D" parent="."]
+[node name="HurtboxComponent" type="Area2D" parent="." unique_id=272091134]
 script = ExtResource("4_hurtbox")
 
-[node name="StateMachine" type="Node" parent="."]
+[node name="StateMachine" type="Node" parent="." unique_id=447427731]
 script = ExtResource("5_fsm")

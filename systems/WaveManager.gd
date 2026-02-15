@@ -43,6 +43,7 @@ func start_next_wave() -> void:
 	current_wave += 1
 	print_debug("[WaveManager] === INICIANDO ONDA %d ===" % current_wave)
 	wave_started.emit(current_wave)
+	EventBus.wave_started.emit(current_wave)
 	
 	# Logica simples de dificuldade: Mais inimigos a cada onda (ex: 5, 7, 9...)
 	var count = current_wave * 2 + 3
@@ -72,8 +73,9 @@ func spawn_enemy() -> void:
 	enemy.global_position = spawn_pos
 	
 	# Escolhe atributos aleatorios da lista
+	var stats = null
 	if possible_enemies.size() > 0:
-		var stats = possible_enemies.pick_random()
+		stats = possible_enemies.pick_random()
 		# Tenta injetar os stats no inimigo
 		if "stats" in enemy:
 			enemy.stats = stats
@@ -99,4 +101,4 @@ func _on_enemy_died() -> void:
 	if enemies_alive <= 0:
 		print_debug("[WaveManager] ONDA %d COMPLETADA!" % current_wave)
 		wave_completed.emit(current_wave)
-		# EventBus.wave_completed.emit(current_wave) # Se quiser usar o evento global
+		EventBus.wave_completed.emit(current_wave)
