@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://ctykuw58jnjs0" path="res://view/scenes/RunScene/node_2d.gd" id="2_ccl4p"]
 [ext_resource type="Texture2D" uid="uid://8wuwnmbuijxf" path="res://view/assets/background/background.png" id="2_jtjss"]
 [ext_resource type="PackedScene" uid="uid://biqf57jeuninp" path="res://view/ui/Run/run_ui.tscn" id="3_cgcwc"]
+[ext_resource type="Script" path="res://systems/WaveManager.gd" id="4_wave"]
+[ext_resource type="PackedScene" uid="uid://c8j6y7z4x8k1w" path="res://entities/player/Player.tscn" id="5_player"]
 
 [node name="RunScene" type="Node" unique_id=2141480253]
 
@@ -12,6 +14,14 @@ script = ExtResource("2_ccl4p")
 [node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=956640247]
 texture = ExtResource("2_jtjss")
 centered = false
+
+[node name="Player" parent="." unique_id=1131344321 instance=ExtResource("5_player")]
+position = Vector2(576, 324)
+
+[node name="WaveManager" type="Node" parent="." unique_id=12345678]
+script = ExtResource("4_wave")
+spawn_radius = 600.0
+center_point = Vector2(576, 324)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1590461647]
 

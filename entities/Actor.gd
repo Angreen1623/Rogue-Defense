@@ -21,12 +21,12 @@ class_name Actor
 # @onready var state_machine: StateMachine = $StateMachine # Comentado se nao tiver node, descomentar se usar
 
 func _ready() -> void:
-    # Inicializacao comum a todos os Atores
-    pass
+	# Inicializacao comum a todos os Atores
+	pass
 
 func _physics_process(delta: float) -> void:
-    # StateMachine geralmente gerencia isso, mas se precisar de logica global, vem aqui.
-    pass
+	# StateMachine geralmente gerencia isso, mas se precisar de logica global, vem aqui.
+	pass
 
 
 func _exit_tree() -> void:

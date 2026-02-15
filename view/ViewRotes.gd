@@ -1,4 +1,3 @@
-class_name Routes
 extends Node
 
 ## ============================================================================
@@ -11,7 +10,7 @@ extends Node
 ## ============================================================================
 
 const routes := {
-	"run_scene": preload("uid://biqf57jeuninp"),   # Cena da Partida
+	"run_scene": preload("uid://fw47674nx0ow"),   # Cena da Partida
 	"guild_scene": preload("uid://b5kw620khnrhh"), # Cena da Guilda (Menu Principal)
 }
 

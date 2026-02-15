@@ -24,6 +24,15 @@ extends Node
 ## ============================================================================
 
 ## ============================================================================
+## GAME LOOP EVENTS (Eventos de Loop de Jogo)
+## ============================================================================
+## Emitido quando uma onda comeca.
+signal wave_started(wave_number: int)
+
+## Emitido quando todos os inimigos de uma onda morrem.
+signal wave_completed(wave_number: int)
+
+## ============================================================================
 ## COMBAT EVENTS (Eventos de Combate)
 ## ============================================================================
 ## Emitido quando uma entidade leva dano.
@@ -34,7 +43,7 @@ extends Node
 
 ## Emitido quando uma entidade morre (HP chega a 0).
 ## @param entity_id: ID unico da entidade que morreu.
-####################signal entity_died(entity_id: int)
+signal entity_died(entity_id: int)
 
 ## Emitido quando uma entidade recupera vida.
 ## @param entity_id: ID unico da entidade curada.
@@ -75,10 +84,10 @@ extends Node
 
 ## Emitido quando uma entidade e criada (spawnada) no mundo.
 ## Util para sitemas que precisam rastrear todas as entidades vivas.
-##########################signal entity_spawned(eid: int, def_id: String)
+signal entity_spawned(eid: int, def_id: String)
 
 ## Emitido quando uma entidade e removida do jogo (despawnada).
-########################signal entity_despawned(eid: int, reason: String)
+signal entity_despawned(eid: int, reason: String)
 
 
 ## Funcao chamada automaticamente pelo Godot quando o jogo comeca.

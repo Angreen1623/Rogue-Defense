@@ -15,12 +15,23 @@ run/main_scene="uid://b5kw620khnrhh"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+EventBus="*res://autoloads/EventBus.gd"
+Routes="*res://autoloads/Routes.gd"
+SnapshotLoader="*res://systems/SnapshotLoader.gd"
+GameManager="*res://systems/GameManager.gd"
+
 [display]
 
 window/size/viewport_width=952
 window/size/viewport_height=528
 window/size/mode=3
 window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
 
 [gui]
 
@@ -36,7 +47,3 @@ theme/custom_font="uid://36uqtsfpuwos"
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/gut/plugin.cfg")

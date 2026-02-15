@@ -49,8 +49,7 @@ func _scan_directory(path: String) -> void:
 			if not dir.current_is_dir():
 				# Filtra apenas arquivos de recurso
 				if file_name.ends_with(".tres") or file_name.ends_with(".res"):
-					var full_path = path + "/" + file_name
-					full_path = full_path.replace("//", "/") # Corrige barras duplas
+					var full_path = path.path_join(file_name)
 					
 					var res = load(full_path)
 					if res is EnemySnapshot:
